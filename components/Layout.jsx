@@ -13,6 +13,7 @@ module.exports = function Layout({ title, children }) {
         <script defer src='../scripts/authUser.js' />
         <link rel='stylesheet' href='/css/styles.css' />
         {/* <script defer src="/js/regButtons.js" /> */}
+        <script defer src='/scripts/albumDelete.js' />
       </head>
       <body>{children}</body>
     </html>
