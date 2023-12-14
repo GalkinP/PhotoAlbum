@@ -1,14 +1,13 @@
 const express = require('express');
 const cookieParser = require('cookie-parser');
-const fileupload=require('express-fileupload')
+const fileupload = require('express-fileupload');
+const morgan = require('morgan');
 const ssr = require('../middleware/ssr');
 const { verifyAccessToken } = require('../middleware/verifyTokens');
 const { checkUser } = require('../middleware/auth');
-const morgan = require('morgan')
 
 const config = (app) => {
-
-  app.use(morgan('dev'))
+  app.use(morgan('dev'));
 
   app.use(fileupload());
 
