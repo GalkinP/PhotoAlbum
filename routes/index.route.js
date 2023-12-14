@@ -1,12 +1,12 @@
 const router = require('express').Router();
 
-//view
-const authRouter = require('./views/auth.router')
+// view
+const authRouter = require('./views/auth.router');
 
-//api
-
-//use
-router.use('/auth', authRouter)
-
+// api
+const authApiRouter = require('./api/auth.router');
+// use
+router.use('/auth', authRouter);
+router.use('/api/auth', authApiRouter);
 
 module.exports = router;
