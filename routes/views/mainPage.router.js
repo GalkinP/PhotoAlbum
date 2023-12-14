@@ -6,12 +6,13 @@ router.get('/', async (req, res) => {
   try {
     const albums = await Album.findAll();
     const photos = await Photo.findAll()
-console.log(photos, "--------------");
+console.log(res.locals.user , "--------------");
 
     const data = res.renderComponent(AlbumMain, {
       title: 'AlbumMain',
       albums,
-      photos
+      photos,
+      user:res.locals.user
     });
     res.send(data);
   } catch ({ error }) {
