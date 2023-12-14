@@ -16,4 +16,5 @@ router.use('/api/auth', authApiRouter);
 router.use('/mainPage', mainPageRouter);
 router.use('/api/albumDelete', albumApiRouter);
 
+
 module.exports = router;

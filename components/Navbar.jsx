@@ -5,18 +5,18 @@ function Navbar() {
     <>
       <ul className='nav justify-content-center'>
         <li className='nav-item'>
-          <a className='nav-link active' aria-current='page' href='#'>
-            Active
+          <a className='nav-link active' aria-current='page' href='/auth/registration'>
+            Sign Up
           </a>
         </li>
         <li className='nav-item'>
-          <a className='nav-link' href='#'>
-            Link
+          <a className='nav-link' href='/auth/authorization'>
+            Sign In
           </a>
         </li>
         <li className='nav-item'>
-          <a className='nav-link' href='#'>
-            Link
+          <a className='nav-link' href='/'>
+            Main Page
           </a>
         </li>
         <li className='nav-item'>
