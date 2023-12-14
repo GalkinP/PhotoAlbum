@@ -8,9 +8,10 @@ function AuthorizationFormPage({ title }) {
         <form id='sign-in'>
           <div className='mb-3'>
             <label htmlFor='exampleInputEmail1' className='form-label'>
-              Email address
+              Email
             </label>
             <input
+              name='mail'
               type='email'
               className='form-control'
               id='exampleInputEmail1'
@@ -22,6 +23,7 @@ function AuthorizationFormPage({ title }) {
               Password
             </label>
             <input
+              name='password'
               type='password'
               className='form-control'
               id='exampleInputPassword1'
@@ -31,6 +33,7 @@ function AuthorizationFormPage({ title }) {
             Submit
           </button>
         </form>
+        <h1 style={{ color: 'red' }} id='errorLogin' />
       </div>
     </Layout>
   );
