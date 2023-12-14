@@ -7,8 +7,13 @@ function FormAlbum({ album , photos}) {
  
   return (
     <div className='card' style={{ width: '18rem' }} data-albumid={album.id}>
-      <a href=''>
+
+      <a href={`/photos/${album.id}`}>
+       
+
+     
         {arr[0] && <img src={arr[0].img} className='card-img-top' style={{width: '300px'}} />}
+
       </a>
       <div className='card-body'>
         <h5 className='card-title'>{album.title}</h5>

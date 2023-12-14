@@ -1,14 +1,14 @@
-const React = require("react");
-const PhotoEl = require("../components/PhotoEl");
-const Layout = require("../components/Layout");
+const React = require('react');
+const PhotoEl = require('../components/PhotoEl');
+const Layout = require('../components/Layout');
 
-function AlbumEl({ album }) {
+function AlbumEl({ album, user }) {
   return (
     <Layout>
-      <div className="albumEl">
+      <div className='albumEl'>
         <h1>{album.title}</h1>
         {album.Photos.map((photo) => (
-          <PhotoEl photo />
+          <PhotoEl user={user} album={album} photo={photo} key={photo.id} />
         ))}
       </div>
     </Layout>
