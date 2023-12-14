@@ -23,5 +23,6 @@ function FormAlbum({ album , photos}) {
     </div>
   );
 }
+// lol
 
 module.exports = FormAlbum;
