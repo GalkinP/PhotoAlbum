@@ -1,14 +1,14 @@
 const React = require('react');
 const Layout = require('./Layout');
 
-function RegistrationFormPage({ title }) {
+function AuthorizationFormPage({ title }) {
   return (
     <Layout title={title}>
       <div className='container'>
-        <form id='sing-up'>
+        <form id='sign-in'>
           <div className='mb-3'>
             <label htmlFor='exampleInputEmail1' className='form-label'>
-              Name
+              Email address
             </label>
             <input
               type='email'
@@ -16,33 +16,10 @@ function RegistrationFormPage({ title }) {
               id='exampleInputEmail1'
               aria-describedby='emailHelp'
             />
-            <div id='emailHelp' className='form-text'>
-              We'll never share your email with anyone else.
-            </div>
-          </div>
-          <div className='mb-3'>
-            <label htmlFor='exampleInputPassword1' className='form-label'>
-              Login
-            </label>
-            <input
-              type='text'
-              className='form-control'
-              id='exampleInputPassword1'
-            />
           </div>
           <div className='mb-3'>
             <label htmlFor='exampleInputPassword1' className='form-label'>
               Password
-            </label>
-            <input
-              type='password'
-              className='form-control'
-              id='exampleInputPassword1'
-            />
-          </div>
-          <div className='mb-3'>
-            <label htmlFor='exampleInputPassword1' className='form-label'>
-              PasswordCheck
             </label>
             <input
               type='password'
@@ -59,4 +36,4 @@ function RegistrationFormPage({ title }) {
   );
 }
 
-module.exports = RegistrationFormPage;
+module.exports = AuthorizationFormPage;
