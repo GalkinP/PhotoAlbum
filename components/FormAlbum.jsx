@@ -5,7 +5,7 @@ function FormAlbum({ album , photos}) {
  const count = photos.filter(photo => photo.albumID===album.id).length
   return (
     <div className='card' style={{ width: '18rem' }} data-albumid={album.id}>
-      <a href=''>
+      <a href={`/photos/${album.id}`}>
         <img src='#' className='card-img-top' alt='...' />
       </a>
       <div className='card-body'>

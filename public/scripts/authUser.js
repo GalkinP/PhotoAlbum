@@ -50,7 +50,7 @@ if (formAuth) {
     });
     const data = await res.json();
     if (data.message === 'success') {
-      window.location.assign('/mainPage');
+      window.location.assign('/albums');
     }
   });
 }
