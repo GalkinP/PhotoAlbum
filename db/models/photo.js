@@ -22,10 +22,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         type: DataTypes.TEXT,
       },
-      comment: {
-        allowNull: false,
-        type: DataTypes.TEXT,
-      },
+
       albumID: {
         allowNull: false,
         type: DataTypes.INTEGER,
