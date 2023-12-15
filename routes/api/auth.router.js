@@ -62,6 +62,7 @@ router.post('/authorization', async (req, res) => {
           httpOnly: true,
         })
         .json({ message: 'success' });
+ 
     }
   } catch (error) {
     console.error(error);
