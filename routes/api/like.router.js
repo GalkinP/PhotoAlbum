@@ -1,5 +1,8 @@
 const router = require("express").Router();
 
-router.post("/", (req, res) => {
-  
+router.put("/:id", (req, res) => {
+  console.log(req.params, "+++++++++++++++");
 })
+
+
+module.exports = router
