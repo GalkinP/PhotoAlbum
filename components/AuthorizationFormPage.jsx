@@ -41,6 +41,8 @@ function AuthorizationFormPage({ title }) {
           <button type='submit' className='btn btn-primary'>
             Submit
           </button>
+          <div id="errorLogin"></div>
+          
         </form>
         <h1 style={{ color: 'red' }} id='errorLogin' />
       </div>

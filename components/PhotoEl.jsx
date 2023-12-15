@@ -2,7 +2,7 @@ const React = require('react');
 
 function PhotoEl({ photo, album, user }) {
   return (
-    <div className='photoEl'>
+    <div className='photoEl' data-id={photo.id}>
       <div
         className='img'
         style={{
@@ -12,14 +12,14 @@ function PhotoEl({ photo, album, user }) {
         }}
       >
         <img src={photo.img} style={{ width: '300px' }} alt='' />
-        <div className='like'>
-          <button type='submit'>+</button>
+        <div className='like' data-id={photo.id}>
+          <button type='submit' >♡</button>
           {/* <p>{likes.length}</p> */}
         </div>
       </div>
       <h3>{photo.title}</h3>
       <h3>{photo.description}</h3>
-      {user && user.id === album.userId && (
+      {user && user.id === album.userID && (
         <div className='photoButtons'>
           <button type='submit' className='delPhotoBtn'>
             удалить

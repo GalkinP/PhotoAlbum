@@ -7,7 +7,7 @@ if (formReg) {
   formReg.addEventListener('submit', async (event) => {
     event.preventDefault();
     const { name, mail, password, passwordCheck } = event.target;
-    console.log(name.value);
+   
     if (
       name.value.trim() === '' ||
       mail.value.trim() === '' ||
@@ -47,12 +47,15 @@ if (formAuth) {
   formAuth.addEventListener('submit', async (event) => {
     event.preventDefault();
     const { mail, password } = event.target;
+    console.log(mail.value, ">>>>>>>>.");
     if (mail.value.trim() === '' || password.value.trim() === '') {
       document
         .querySelector('#errorLogin')
         .insertAdjacentHTML('afterend', 'Заполните все поля');
       formAuth.reset();
+    
     }
+    console.log(mail.value, "");
     const res = await fetch('/api/auth/authorization', {
       method: 'POST',
       headers: {
@@ -64,6 +67,7 @@ if (formAuth) {
       }),
     });
     const data = await res.json();
+    console.log(data);
     if (data.message === 'success') {
       window.location.assign('/albums');
     }
