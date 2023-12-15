@@ -17,7 +17,7 @@ if (formAddAlbum) {
           title: title.value,
           count: 0,
           isOpen: true,
-          userID: 1,
+          
         }),
       });
       const data = await res.json();

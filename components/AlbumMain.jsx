@@ -9,7 +9,7 @@ function AlbumMain({ user, title, albums, photos }) {
 <p>{user.name}</p>
       <AddNewAlbum />
       <div className='card_album'>
-        {albums && albums.map((album) => <FormAlbum album={album} photos={photos}/>)}
+        {albums && albums.map((album) => <FormAlbum user ={user} album={album} photos={photos}/>)}
 
       </div>
     </Layout>
