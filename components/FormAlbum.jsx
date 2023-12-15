@@ -8,7 +8,7 @@ function FormAlbum({ album, photos ,user}) {
 
   return (
     <div className="card" style={{ width: "18rem" }} data-albumid={album.id}>
-      <a href={`/photos/${album.id}`}>
+      
         {arr[0] && (
           <img
             src={arr[0].img}
@@ -16,9 +16,9 @@ function FormAlbum({ album, photos ,user}) {
             style={{ width: "18rem" }}
           />
         )}
-      </a>
+      
       <div className="card-body">
-        <h5 className="card-title">{album.title}</h5>
+      <a href={`/photos/${album.id}`}><h5 className="card-title">{album.title}</h5></a>
         <p className="card-text">{`В АЛЬБОМЕ: ${count}`}</p>
         <p className="card-text">{album.isOpen}</p>
 
