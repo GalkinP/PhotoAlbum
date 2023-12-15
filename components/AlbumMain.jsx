@@ -6,7 +6,7 @@ const AddNewAlbum = require('./AddNewAlbum');
 function AlbumMain({ user, title, albums, photos }) {
   return (
     <Layout title={title}>
-      <p>{user.name}</p>
+      <p style={{ display: 'flex', justifyContent: 'center' }}>{user.name}</p>
       <AddNewAlbum />
 
       <div
@@ -17,8 +17,9 @@ function AlbumMain({ user, title, albums, photos }) {
         }}
       >
         {albums &&
-          albums.map((album) => <FormAlbum user= {user} album={album} photos={photos} />)}
-
+          albums.map((album) => (
+            <FormAlbum user={user} album={album} photos={photos} />
+          ))}
       </div>
     </Layout>
   );

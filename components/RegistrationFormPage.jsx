@@ -64,9 +64,9 @@ function RegistrationFormPage({ title }) {
           <button type='submit' className='btn btn-primary'>
             Submit
           </button>
-          <div id="error"></div>
+          {/* <div id="error"></div> */}
+          <h1 style={{ color: 'red' }} id='error' />
         </form>
-        <h1 style={{ color: 'red' }} id='error' />
       </div>
     </Layout>
   );

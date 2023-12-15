@@ -19,6 +19,16 @@ function Navbar() {
           </a>
         </li>
         <li className='nav-item'>
+          <a
+            className='nav-link active'
+            id='#sign-out'
+            aria-current='page'
+            href='/auth/logout'
+          >
+            Sign Out
+          </a>
+        </li>
+        <li className='nav-item'>
           <a className='nav-link' href='/'>
             Main Page
           </a>
