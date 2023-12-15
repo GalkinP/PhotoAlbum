@@ -1,6 +1,6 @@
 const React = require('react');
 
-function Navbar() {
+function Navbar({ user }) {
   return (
     <>
       <ul className='nav justify-content-center'>
@@ -32,6 +32,13 @@ function Navbar() {
           <a className='nav-link' href='/'>
             Main Page
           </a>
+        </li>
+        <li className='nav-item'>
+          {user && (
+            <a className='nav-link' href='/albums'>
+              Albums
+            </a>
+          )}
         </li>
       </ul>
     </>
