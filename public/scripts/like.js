@@ -1,17 +1,31 @@
-console.log("6666666666");
-const photoDiv = document.querySelector(`.photoEl`);
-// console.log(photoDiv, "&&&&&&&&&");
-const likeId= photoDiv.dataset.id;
 
+const photoDiv = document.querySelector(`.photoEl`);
+const likeId = photoDiv.dataset.id;
 const likeDiv = document.querySelector(`.like[data-id='${likeId}']`);
 
 if (likeDiv) {
-    likeDiv.addEventListener("click", (event) => {
-    const response = fetch(`/photos/${likeId}/like`, {
-    method: "POST",
-    headers: {
+  const { id } = likeDiv.dataset;
+  likeDiv.addEventListener("click", async (event) => {
+    const photo = event.target.closest(".photoEl");
+   
+    const photoId = id
+
+   
+
+    // console.log(userId, "}}}}}}}}}}");
+    console.log(photoId, "{{{{{{{{{{{");
+
+    const response = await fetch(`api/like/${id}`, {
+      method: "PUT",
+      headers: {
         "Content-Type": "application/json",
-    },
-    })
-})
+      },
+      body: JSON.stringify({
+        // userId: userId,
+        photoId: photoId,
+      }),
+    });
+
+   
+  });
 }
