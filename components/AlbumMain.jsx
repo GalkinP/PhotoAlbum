@@ -8,6 +8,7 @@ function AlbumMain({ user, title, albums, photos }) {
     <Layout title={title}>
       <p>{user.name}</p>
       <AddNewAlbum />
+
       <div
         className='card_album'
         style={{
@@ -17,6 +18,7 @@ function AlbumMain({ user, title, albums, photos }) {
       >
         {albums &&
           albums.map((album) => <FormAlbum album={album} photos={photos} />)}
+
       </div>
     </Layout>
   );

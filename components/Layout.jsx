@@ -20,7 +20,11 @@ module.exports = function Layout({ title, children, user }) {
         <link rel='stylesheet' href='/css/styles.css' />
         {/* <script defer src="/js/regButtons.js" /> */}
         <script defer src='/scripts/albumDelete.js' />
+
+        <script defer src='/scripts/like.js' />
+
         <script defer src='/scripts/albumAdd.js' />
+
       </head>
       <body>
         <Navbar user={user} />
