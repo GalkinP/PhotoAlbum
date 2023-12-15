@@ -2,6 +2,10 @@ const router = require('express').Router();
 const { Album, Photo } = require('../../db/models');
 const FormAlbum = require('../../components/FormAlbum');
 
+
+
+
+
 router.delete('/albumDelete/:albumid', async (req, res) => {
   const { albumid } = req.params;
   const data = await Album.destroy({ where: { id: albumid } });
@@ -10,12 +14,19 @@ router.delete('/albumDelete/:albumid', async (req, res) => {
   }
 });
 
+
+
+
+
+
+
 router.post('/', async (req, res) => {
   const data = req.body;
   try {
     // создаем пользователя в бд
     const album = await Album.create(data);
     const photos = [];
+  
     // const photos = await Photo.findAll({where:{albumID:album.id}})
     // рендерим страничку одну, не забываем про { doctype: false }
     const html = res.renderComponent(
