@@ -1,6 +1,6 @@
 const React = require('react');
 const Layout = require('./Layout');
-const Navbar = require('./Navbar');
+
 
 function StartPage() {
   return (
