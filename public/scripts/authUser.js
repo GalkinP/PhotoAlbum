@@ -21,7 +21,7 @@ if (formReg) {
       });
       const data = await res.json();
       if (data.message === 'success') {
-        window.location.assign('/');
+        window.location.assign('/auth/authorization');
       }
     }
     formReg.reset();
@@ -50,7 +50,7 @@ if (formAuth) {
     });
     const data = await res.json();
     if (data.message === 'success') {
-      window.location.assign('/');
+      window.location.assign('/albums');
     }
   });
 }
