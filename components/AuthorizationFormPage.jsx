@@ -5,7 +5,16 @@ function AuthorizationFormPage({ title }) {
   return (
     <Layout title={title}>
       <div className='container'>
-        <form id='sign-in'>
+        <form
+          id='sign-in'
+          style={{
+            margin: '0 auto',
+            width: '50%',
+            display: 'flex',
+            justifyContent: 'center',
+            flexDirection: 'column',
+          }}
+        >
           <div className='mb-3'>
             <label htmlFor='exampleInputEmail1' className='form-label'>
               Email
