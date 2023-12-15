@@ -7,6 +7,16 @@ if (formReg) {
     event.preventDefault();
     const { name, mail, password, passwordCheck } = event.target;
     console.log(name.value);
+    if (
+      name.value.trim() === '' ||
+      mail.value.trim() === '' ||
+      password.value.trim() === '' ||
+      passwordCheck.value.trim() === ''
+    ) {
+      document
+        .querySelector('#error')
+        .insertAdjacentHTML('afterend', 'Заполните все поля');
+    }
     if (password.value === passwordCheck.value) {
       const res = await fetch('/api/auth/registration', {
         method: 'post',
@@ -23,8 +33,12 @@ if (formReg) {
       if (data.message === 'success') {
         window.location.assign('/auth/authorization');
       }
+    } else {
+      document
+        .querySelector('#error')
+        .insertAdjacentHTML('afterend', 'Пароли не совпадают');
+      formReg.reset();
     }
-    formReg.reset();
   });
 }
 
