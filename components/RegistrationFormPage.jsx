@@ -5,7 +5,16 @@ function RegistrationFormPage({ title }) {
   return (
     <Layout>
       <div className='container'>
-        <form id='sing-up'>
+        <form
+          id='sing-up'
+          style={{
+            margin: '0 auto',
+            width: '50%',
+            display: 'flex',
+            justifyContent: 'center',
+            flexDirection: 'column',
+          }}
+        >
           <div className='mb-3'>
             <label htmlFor='exampleInputEmail1' className='form-label'>
               Name
