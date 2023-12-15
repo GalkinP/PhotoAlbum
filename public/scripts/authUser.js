@@ -1,5 +1,6 @@
 const formReg = document.querySelector('#sing-up');
 const formAuth = document.querySelector('#sign-in');
+const logout = document.querySelector('#sign-out')
 
 console.log(formReg);
 if (formReg) {
@@ -68,3 +69,5 @@ if (formAuth) {
     }
   });
 }
+
+logout.addEventListener('click',)
