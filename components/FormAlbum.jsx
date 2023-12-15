@@ -1,5 +1,6 @@
 const React = require('react');
 const photo = require('../db/models/photo');
+const AddNewAlbum = require('./AddNewAlbum')
 
 function FormAlbum({ album , photos}) {
  const count = photos.filter(photo => photo.albumID===album.id).length
