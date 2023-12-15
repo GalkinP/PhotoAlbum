@@ -8,6 +8,7 @@ const albumPageRouter = require('./views/album.router');
 const notFoundRouter = require('./views/404.router');
 
 // api
+const photoApiRouter = require('./api/photo.router');
 const authApiRouter = require('./api/auth.router');
 const albumApiRouter = require('./api/album.router');
 const likeApiRouter = require('./api/like.router');
@@ -24,5 +25,6 @@ router.use('/albums', mainPageRouter);
 router.use('/api/albumDelete', albumApiRouter);
 router.use('/api/', albumApiRouter);
 router.use('/api/like', likeApiRouter);
+router.use('/api/photo',photoApiRouter)
 
 module.exports = router;
