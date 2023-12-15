@@ -15,6 +15,7 @@ module.exports = function Layout({ title, children }) {
         <link rel='stylesheet' href='/css/styles.css' />
         {/* <script defer src="/js/regButtons.js" /> */}
         <script defer src='/scripts/albumDelete.js' />
+        <script defer src='/scripts/like.js' />
       </head>
       <body>{children}</body>
     </html>
