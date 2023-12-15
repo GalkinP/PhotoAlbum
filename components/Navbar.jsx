@@ -5,7 +5,11 @@ function Navbar() {
     <>
       <ul className='nav justify-content-center'>
         <li className='nav-item'>
-          <a className='nav-link active' aria-current='page' href='/auth/registration'>
+          <a
+            className='nav-link active'
+            aria-current='page'
+            href='/auth/registration'
+          >
             Sign Up
           </a>
         </li>
@@ -17,16 +21,6 @@ function Navbar() {
         <li className='nav-item'>
           <a className='nav-link' href='/'>
             Main Page
-          </a>
-        </li>
-        <li className='nav-item'>
-          <a
-            className='nav-link disabled'
-            href='#'
-            tabindex='-1'
-            aria-disabled='true'
-          >
-            Disabled
           </a>
         </li>
       </ul>
