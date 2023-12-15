@@ -22,7 +22,8 @@ function AddNewAlbum({ album }) {
             Title
           </label>
           <input
-            type='email'
+            name='title'
+            type='text'
             class='form-control'
             id='exampleInputEmail1'
             aria-describedby='emailHelp'
