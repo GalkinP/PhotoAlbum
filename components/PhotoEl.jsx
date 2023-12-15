@@ -19,7 +19,7 @@ function PhotoEl({ photo, album, user }) {
       </div>
       <h3>{photo.title}</h3>
       <h3>{photo.description}</h3>
-      {user && user.id === album.userId && (
+      {user && user.id === album.userID && (
         <div className='photoButtons'>
           <button type='submit' className='delPhotoBtn'>
             удалить
