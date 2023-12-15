@@ -23,6 +23,8 @@ router.delete('/albumDelete/:albumid', async (req, res) => {
 router.post('/', async (req, res) => {
   const data = req.body;
   try {
+    const userID=res.locals.user.id
+data.userID=userID
     // создаем пользователя в бд
     const album = await Album.create(data);
     const photos = [];

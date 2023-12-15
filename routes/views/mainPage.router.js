@@ -6,7 +6,7 @@ router.get('/', async (req, res) => {
   try {
     const albums = await Album.findAll();
     const photos = await Photo.findAll()
-console.log(res.locals.user , "--------------");
+
 
     const data = res.renderComponent(AlbumMain, {
       title: 'AlbumMain',
