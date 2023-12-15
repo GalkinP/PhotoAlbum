@@ -1,11 +1,13 @@
 const React = require('react');
 
-
 function AddNewAlbum({ album }) {
   return (
-    <a href='#' className='btn btn-primary'>
-      добавить Альбом
-    </a>
+    <div>
+      <form className='formAddAlbum'>
+        <input type='text' name='title' />
+        <button type='sumbit'>Новый АЛЬБОМ</button>
+      </form>
+    </div>
   );
 }
 
